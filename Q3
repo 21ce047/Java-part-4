@@ -1,0 +1,42 @@
+public class P4Q3 {
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        try {
+            System.out.println("Inside TRY BLOCk");
+            
+            int no = 10/0;
+        } catch (ArithmeticException e) {
+        
+            
+            System.out.println(e);
+            
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("Exception");
+        }
+        catch(Exception e)
+        {
+            System.out.println("Exception : " + e.getMessage());
+        }
+        
+        try {
+            int[] arr = new int[4];
+            int i = arr[4];
+            System.out.println(i);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            // TODO: handle exception
+            System.out.println("ArratOutOfIndex");
+        }
+           
+
+
+        finally {
+            System.out.println("finally block is always executed");
+        }
+        
+    }
+    
+}
